@@ -21,6 +21,8 @@ public class Task9 {
 
     public static void main(String[] args) {
 
+        //Arrays.sort()
+
         int[] a1 = {0, 2, 2};
         int[] a2 = {1, 3};
 
