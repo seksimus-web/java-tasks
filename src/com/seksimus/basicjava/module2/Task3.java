@@ -22,7 +22,5 @@ public class Task3 {
         double differance = Math.abs((a + b) - c);
 
         return differance < 0.0001;
-        // что-то написал
     }
 }
-// review branch
