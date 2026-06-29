@@ -17,22 +17,37 @@ public class Task6 {
 
     public static void main(String[] args) {
 
-        boolean result = isPowerOfTwo(0);
+        boolean result = isPowerOfTwo(-9);
 
         System.out.println(result);
     }
 
     public static boolean isPowerOfTwo(int value) {
-        int number = Math.abs(value);
 
-        if (number == 0) {
+        if (value < 0) {
+            value = -(value);
+        }
+
+        if (value == 0) {
             return false;
         }
-
-        while (number % 2 == 0) {
-            number = number / 2;
+        while (value % 2 == 0) {
+            value = value / 2;
         }
 
-        return number == 1;
+        return value == 1;
     }
 }
+        //        int number = Math.abs(value);
+//
+//        if (number == 0) {
+//            return false;
+//        }
+//
+//        while (number % 2 == 0) {
+//            number = number / 2;
+//        }
+//
+//        return number == 1;
+//    }
+//}
