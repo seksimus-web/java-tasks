@@ -58,21 +58,26 @@ public class Task10 {
     private static String printTextPerRole(String[] roles, String[] textLines) {
 
         StringBuilder result = new StringBuilder();
+        //создает объект StringBuilder и сохраняет его в переменную result
 
         for (String role : roles) {
+            //for-each перебирает каждый элемент массива roles по очереди
 
             result.append(role).append(":\n");
+            // result.append(role);
+            // result.append(":\n");
 
             for (int i = 0; i < textLines.length; i++) {
 
                 String line = textLines[i];
+                //if (textLines[i].startsWith(role + ":")) {...
 
                 if (line.startsWith(role + ":")) {
 
-                    result.append(i + 1)
+                    result.append(i + 1) //append(i + 1 + ") ")
                             .append(")")
                             .append(line.substring(role.length() + 1))
-                            .append("\n");
+                            .append("\n"); // начало следующего индекса с новой строчки
                 }
             }
 
