@@ -18,8 +18,13 @@ public class Task3 {
     }
 
     public static boolean doubleExpression(double a, double b, double c) {
+        //                  модуль
+        //double differance = Math.abs((a + b) - c);
 
-        double differance = Math .abs((a + b) - c);
+        double differance = ((a + b) - c);
+        if (differance < 0) {
+            return differance > -0.0001;
+        }
 
         return differance < 0.0001;
     }

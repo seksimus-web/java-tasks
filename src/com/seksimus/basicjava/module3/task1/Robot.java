@@ -12,14 +12,14 @@ public class Robot {
         this.direction = direction;
     }
 
-    public void turnLeft() {
-        switch (direction) {
-            case UP -> direction = Direction.LEFT;
-            case LEFT -> direction = Direction.DOWN;
-            case DOWN -> direction = Direction.RIGHT;
-            case RIGHT -> direction = Direction.UP;
-        }
-    }
+//    public void turnLeft() {
+//        switch (direction) {
+//            case UP -> direction = Direction.LEFT;
+//            case LEFT -> direction = Direction.DOWN;
+//            case DOWN -> direction = Direction.RIGHT;
+//            case RIGHT -> direction = Direction.UP;
+//        }
+//    }
 
     public void turnRight() {
         switch (direction) {
