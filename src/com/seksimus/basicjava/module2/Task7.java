@@ -25,13 +25,15 @@ public class Task7 {
     }
 
     public static boolean isPalindrome(String text) {
-        //                        заменитьВсе    [^не от a-z A-Z 0-9]
+
         String cleanedText = text.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        // этот ебучий кусок я решал 3 часа
+        for (int i = 0, j = cleanedText.length() - 1; i < j; i++, j--)
+        if (cleanedText.charAt(i) != cleanedText.charAt(j)) {
+            return false;
 
-        String reversedText = new StringBuilder(cleanedText)
-                .reverse() // разворачивает символы в обратном порядке
-                .toString(); // StringBuilder → String
+        }
 
-        return cleanedText.equals(reversedText);
+        return true;
     }
 }
