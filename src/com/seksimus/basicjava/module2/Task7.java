@@ -26,7 +26,14 @@ public class Task7 {
 
     public static boolean isPalindrome(String text) {
 
-        String cleanedText = text.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        String cleanedText = "";
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.charAt(i);
+
+            if (Character.isLetterOrDigit(c)) {
+                cleanedText += Character.toLowerCase(c);
+            }
+        }
         // этот ебучий кусок я решал 3 часа
         for (int i = 0, j = cleanedText.length() - 1; i < j; i++, j--)
         if (cleanedText.charAt(i) != cleanedText.charAt(j)) {
