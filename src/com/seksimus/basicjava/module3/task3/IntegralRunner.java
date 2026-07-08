@@ -13,7 +13,6 @@ public class IntegralRunner {
      *
      * Интервал интегрирования задается его конечными точками а и b, причем а <= b. Для получения достаточно точного результата
      * используйте шаг сетки не больше 10-6.
-     * @param args
      */
 
     public static void main(String[] args) {
@@ -26,7 +25,7 @@ public class IntegralRunner {
         double result = 0;
 
         for (double x = a; x < b; x += step) {
-            result += f.applyAsDouble(x) * step;
+            result += f.applyAsDouble(x) * step; // высота левого прямоугольника умноженная на шаг f(x)
         }
 
         return result;
