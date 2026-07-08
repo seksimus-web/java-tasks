@@ -20,7 +20,7 @@ import java.util.Arrays;
  */
 
 public class AsciiCharSequence implements CharSequence {
-
+    //ыыыыыы
     private byte[] value;
 
     public AsciiCharSequence(byte[] value) {
