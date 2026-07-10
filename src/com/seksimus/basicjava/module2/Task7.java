@@ -35,12 +35,12 @@ public class Task7 {
             }
         }
         // этот ебучий кусок я решал 3 часа
-        for (int i = 0, j = cleanedText.length() - 1; i < j; i++, j--)
-        if (cleanedText.charAt(i) != cleanedText.charAt(j)) {
-            return false;
+        for (int i = 0, j = cleanedText.length() - 1; i < j; i++, j--) {
+            if (cleanedText.charAt(i) != cleanedText.charAt(j)) {
+                return false;
 
+            }
         }
-
         return true;
     }
 }
