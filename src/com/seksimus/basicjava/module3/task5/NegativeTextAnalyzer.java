@@ -2,6 +2,9 @@ package com.seksimus.basicjava.module3.task5;
 
 public class NegativeTextAnalyzer extends KeywordAnalyzer {
 
+    public NegativeTextAnalyzer() {
+    }
+
     @Override
     protected String[] getKeywords() {
         return new String[]{":(", "=(", ":|"};
