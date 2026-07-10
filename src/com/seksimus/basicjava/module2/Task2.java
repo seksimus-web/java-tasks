@@ -23,7 +23,21 @@ public class Task2 {
 
     }
     public static int leapYear(int year) {
-
-        return year / 4 - year / 100 + year / 400;
+              return year / 4 - year / 100 + year / 400;
     }
 }
+
+//public static int leapYearDva(int year) {
+//    int count = 0;
+//
+//    for (int i = 1; i <= year ; i++) {
+//        if(isLeap(i)) {
+//            count++;
+//        }
+//    }
+//    return count;
+//}
+//
+//private static boolean isLeap(int y) {
+//    return (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0);
+//}

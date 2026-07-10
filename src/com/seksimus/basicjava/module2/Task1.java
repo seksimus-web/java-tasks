@@ -20,32 +20,53 @@ package com.seksimus.basicjava.module2;
 public class Task1 {
 
     public static void main(String[] args) {
+
         System.out.println(booleanExpression(false, false, false, false));
         System.out.println(booleanExpression(true, true, true, true));
         System.out.println(booleanExpression(false, false, true, true));
     }
 
-        public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
+    public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
 
-            int value = 0;
+        boolean result = ((a && b && !c && !d) ||
+                (a && c && !b && !d) ||
+                (a && d && !b && !c) ||
+                (b && c && !a && !d) ||
+                (b && d && !a && !c) ||
+                (c && d && !a && !b));
 
-            if (a) {
-                value++;
-            }
 
-            if (b) {
-                value++;
-            }
-
-            if (c) {
-                value++;
-            }
-
-            if (d) {
-                value++;
-            }
-
-            return value == 2;
-
-        }
+        return result;
     }
+}
+
+//    public static void main(String[] args) {
+//        System.out.println(booleanExpression(false, false, false, false));
+//        System.out.println(booleanExpression(true, true, true, true));
+//        System.out.println(booleanExpression(false, false, true, true));
+//    }
+//
+//        public static boolean booleanExpression(boolean a, boolean b, boolean c, boolean d) {
+//
+//            int value = 0;
+//
+//            if (a) {
+//                value++;
+//            }
+//
+//            if (b) {
+//                value++;
+//            }
+//
+//            if (c) {
+//                value++;
+//            }
+//
+//            if (d) {
+//                value++;
+//            }
+//
+//            return value == 2;
+//
+//        }
+//    }

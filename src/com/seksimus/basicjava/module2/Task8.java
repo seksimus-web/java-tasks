@@ -8,19 +8,26 @@ import java.math.BigInteger;
 public class Task8 {
 
     public static void main(String[] args) {
+
         System.out.println(factorial(5));
     }
 
-    public static BigInteger factorial(int value) {
-
-        BigInteger result = BigInteger.ONE;
-
+    public static int factorial(int value) {
+        int result = 1;
         for (int i = 1; i <= value; i++) {
-
-            // result = result * i
-            result = result.multiply(BigInteger.valueOf(i));
+            result *= i;
         }
-
         return result;
     }
 }
+//public static BigInteger factorial(int value) {
+//
+//    BigInteger result = BigInteger.ONE;
+//
+//    for (int i = 1; i <= value; i++) {
+//        result = result.multiply(BigInteger.valueOf(i));
+//    }
+//
+//    return result;
+//}
+//}
