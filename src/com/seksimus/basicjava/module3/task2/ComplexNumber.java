@@ -28,14 +28,21 @@ public final class ComplexNumber {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        ComplexNumber that = (ComplexNumber) o;
-        return Double.compare(re, that.re) == 0 && Double.compare(im, that.im) == 0;
+    public boolean equals(Object obj) {
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        ComplexNumber other = (ComplexNumber) obj;
+
+        return re == other.re && im == other.im;
+
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(re, im);
+        int result = Double.hashCode(re);
+        result = 31 * result + Double.hashCode(im);
+        return result;
     }
 }
