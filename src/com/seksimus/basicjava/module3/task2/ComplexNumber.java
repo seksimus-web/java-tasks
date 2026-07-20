@@ -1,5 +1,14 @@
 package com.seksimus.basicjava.module3.task2;
 
+import java.util.Objects;
+
+/**
+ * Дан класс ComplexNumber. Переопределите в нем методы equals() и hashCode() так, чтобы equals() сравнивал экземпляры
+ * ComplexNumber по содержимому полей re и im, a hashCode() был бы согласованным с реализацией equals().
+ *
+ * Реализация hashCode(), возвращающая константу или не учитывающая дробную часть rе и im, засчитана не будет
+ */
+
 public final class ComplexNumber {
 
     private final double re;
@@ -19,19 +28,15 @@ public final class ComplexNumber {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-
-        if (o == null || getClass() != o.getClass()) {
+    public boolean equals(Object obj) {
+        if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
 
-        ComplexNumber that = (ComplexNumber) o;
+        ComplexNumber other = (ComplexNumber) obj;
 
-        return Double.compare(that.re, re) == 0
-                && Double.compare(that.im, im) == 0;
+        return re == other.re && im == other.im;
+
     }
 
     @Override
