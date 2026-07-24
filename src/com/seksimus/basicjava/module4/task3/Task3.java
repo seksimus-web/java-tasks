@@ -30,7 +30,6 @@ public class Task3 {
 
         for (int i = 1; i <= 3; i++) {
 
-
             RobotConnection connection = null;
 
             try {
@@ -45,9 +44,11 @@ public class Task3 {
                 }
 
             } finally {
-
                 if (connection != null) {
-                    connection.close();
+                    try {
+                        connection.close();
+                    } catch (RobotConnectionException e) {
+                    }
                 }
             }
         }
