@@ -17,8 +17,6 @@ public class Task2 {
     public static void methodA() {
 
         System.out.println(getCallerClassAndMethodName());
-        System.out.println();
-        System.out.println(getCallerClassAndMethodNameDwa());
 
     }
 
@@ -31,19 +29,6 @@ public class Task2 {
         }
 
         StackTraceElement caller = stack[3];
-
-        return caller.getClassName() + "#" + caller.getMethodName();
-    }
-
-    public static String getCallerClassAndMethodNameDwa() {
-
-        StackTraceElement[] stack = new Exception().getStackTrace();
-
-        if (stack.length < 3) {
-            return null;
-        }
-
-        StackTraceElement caller = stack[2];
 
         return caller.getClassName() + "#" + caller.getMethodName();
     }
