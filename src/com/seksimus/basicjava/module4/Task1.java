@@ -23,7 +23,11 @@ public class Task1 {
             return Math.sqrt(x);
         }
 
-        throw new IllegalArgumentException("Expected non-negative number, got " + x);
+        throw new IllegalArgumentException(String.format("Expected non-negative number, got %f", x));
     }
 }
 
+//String.format("текст %s", obj);       строка/объект
+//String.format("число %d", number);    int
+//String.format("дробь %f", value);     double
+//String.format("%b", flag);            boolean
