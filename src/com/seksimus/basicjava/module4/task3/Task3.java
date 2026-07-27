@@ -28,7 +28,7 @@ public class Task3 {
 
     public static void moveRobot(RobotConnectionManager robotConnectionManager, int toX, int toY) {
 
-        for (int i = 1; i <= 3; i++) {
+        for (int i = 0; i <= 2; i++) {
 
             RobotConnection connection = null;
 
@@ -36,7 +36,6 @@ public class Task3 {
                 connection = robotConnectionManager.getConnection();
 
                 connection.moveRobotTo(toX, toY);
-                return;
 
             } catch (RobotConnectionException e) {
                 if (i == 3) {
