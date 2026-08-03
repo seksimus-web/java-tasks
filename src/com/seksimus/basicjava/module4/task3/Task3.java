@@ -30,24 +30,14 @@ public class Task3 {
 
         for (int i = 0; i <= 2; i++) {
 
-            RobotConnection connection = null;
 
-            try {
-                connection = robotConnectionManager.getConnection();
 
+            try (RobotConnection connection = robotConnectionManager.getConnection()) {
                 connection.moveRobotTo(toX, toY);
 
             } catch (RobotConnectionException e) {
-                if (i == 3) {
+                if (i == 2) {
                     throw e;
-                }
-
-            } finally {
-                if (connection != null) {
-                    try {
-                        connection.close();
-                    } catch (RobotConnectionException e) {
-                    }
                 }
             }
         }
