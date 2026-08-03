@@ -36,16 +36,16 @@ public class Task1 {
 
     public static int checkSumOfStream(InputStream inputStream) throws IOException {
 
-        int Sum = 0;
+        int sum = 0;
         int currentByte = inputStream.read();
 
         while (currentByte != -1) {
 
-            Sum = Integer.rotateLeft(Sum, 1) ^ currentByte;
+            sum = Integer.rotateLeft(sum, 1) ^ currentByte;
 
             currentByte = inputStream.read();
         }
 
-        return Sum;
+        return sum;
     }
 }
