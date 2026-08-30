@@ -5,14 +5,7 @@ import java.util.function.Consumer;
 
 public class MailService<T> implements Consumer<Sendable<T>> {
 
-    private final Map<String, List<T>> mailBox =
-            new HashMap<String, List<T>>() {
-
-                @Override
-                public List<T> get(Object key) {
-                    return getOrDefault(key, Collections.emptyList());
-                }
-            };
+    private final Map<String, List<T>> mailBox = new HashMap<>();
 
     @Override
     public void accept(Sendable<T> message) {

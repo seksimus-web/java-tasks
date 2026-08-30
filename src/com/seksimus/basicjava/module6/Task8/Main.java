@@ -43,7 +43,7 @@ public class Main {
 
         System.out.println(mailBox.get("H.P. Lovecraft"));
         System.out.println(mailBox.get("Christopher Nolan"));
-        System.out.println(mailBox.get(randomTo));
+        System.out.println(mailBox.getOrDefault(randomTo, Collections.emptyList()));
 
 
         Salary salary1 =
@@ -68,6 +68,6 @@ public class Main {
 
         System.out.println(salaries.get(salary1.getTo()));
         System.out.println(salaries.get(salary2.getTo()));
-        System.out.println(salaries.get(randomTo));
+        System.out.println(salaries.getOrDefault(randomTo, Collections.emptyList()));
     }
 }
